@@ -1,0 +1,60 @@
+body{
+	position: relative;
+	margin: 0px;
+	padding-bottom: 3em;
+	display: grid;
+	min-height: 100vh;
+	grid-template-rows: auto 1fr auto;
+}
+
+.welcome{
+	height: 400px;
+	width: 900px;
+	border-color: black;
+	border-style: none;
+	margin-top: 60px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.cont{
+	display: flex;
+}
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    padding: 0px 0px;
+    border-radius: 180px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.nombre{
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+}
+
+.words{
+	margin-top: 60px;
+	width:500px;
+	border-color: red;
+	border-style: none;
+	text-align: justify;
+	height: 200px;
+}
+
+.picture{
+	width:300px;
+	border-color: yellow;
+	border-style: none;
+	border-radius:  900px;
+	height: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: auto;
+}
+
+footer{
+	margin-top: auto;
+}
