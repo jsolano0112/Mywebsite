@@ -5,6 +5,22 @@ body{
 	display: grid;
 	min-height: 100vh;
 	grid-template-rows: auto 1fr auto;
+	background-color: #1C1469;
+	color: #8074EC;
+}
+nav, footer{
+	background-color: #1C1469;
+	color: #8074EC;
+}
+
+nav{
+	  box-shadow: 1px 2px 5px #150F4F;
+}
+
+a:hover{
+	  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
 }
 
 .welcome{
@@ -15,6 +31,7 @@ body{
 	margin-top: 60px;
 	margin-left: auto;
 	margin-right: auto;
+
 }
 .cont{
 	display: flex;
@@ -27,6 +44,11 @@ body{
     border-radius: 180px;
     text-align: center;
     font-size: 12px;
+
+}
+
+.btn-circle:hover{
+	background-color:#1C1469;
 }
 
 .nombre{
