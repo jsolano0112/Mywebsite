@@ -1,82 +1,123 @@
 body{
-	position: relative;
-	margin: 0px;
-	padding-bottom: 3em;
+	background-color: #1C1469;
+	color: #8074EC;
+}
+
+.container {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
 	display: grid;
-	min-height: 100vh;
-	grid-template-rows: auto 1fr auto;
-	background-color: #1C1469;
-	color: #8074EC;
-}
-nav, footer{
-	background-color: #1C1469;
-	color: #8074EC;
-}
-
-nav{
-	  box-shadow: 1px 2px 5px #150F4F;
+	grid-gap: 1px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(5, auto);
+	grid-template-areas: "header header"
+						"welcome picture"
+						"about about"
+						"portfolio portfolio"
+						"footer footer";
 }
 
-a:hover{
-	  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: red;
+.container .header{
+	 box-shadow: 1px 2px 5px #150F4F;
+	 max-width: 50%;
+	 border-radius: 18px;
+	 margin: auto;
+	 color: #8074EC;
+	 grid-area: header;
+	/* grid-column-start: 1;
+	 grid-column-end: -1;*/
 }
 
-.welcome{
-	height: 400px;
-	width: 900px;
+a:hover {
+	text-decoration-line: underline;
+  	text-decoration-style: wavy;
+  	text-decoration-color: red;
+}
+
+.container	.welcome {
 	border-color: black;
 	border-style: none;
-	margin-top: 60px;
-	margin-left: auto;
-	margin-right: auto;
+	grid-area: welcome;
+	height: 400px;
+	text-align: justify;
+	margin-top: 50px;
 
 }
-.cont{
+
+.words {
+	border-color: red;
+	border-style: none;
+	text-align: justify;
+	margin-top: 80px;
+}
+
+
+.picture {
+	border-color: red;
+	border-style: none;  
+	height: 400px;
 	display: flex;
-}
-
-.btn-circle {
-    width: 50px;
-    height: 50px;
-    padding: 0px 0px;
-    border-radius: 180px;
-    text-align: center;
-    font-size: 12px;
+	min-height: 100px;
+	grid-area: picture;
+	padding: 10px;
+	margin: auto;
 
 }
 
-.btn-circle:hover{
-	background-color:#1C1469;
+.about {
+	border-color: green;
+	border-style: double;  
+	height: 500px;
+	grid-area: about;
+	background-color: #0F0A36;
+	padding: 20px;
 }
 
-.nombre{
+.education {
+	border-style: dotted;
+	border-color: black;
+	width: 50%;
+	height: 460px;
+}
+
+.hobbies {
+	border-style: dotted;
+	border-color: black;
+	width: 50%;
+	height: 460px;
+}
+
+.portfolio {
+	border-color: black;
+	border-style: double;  
+	height: 500px;
+	grid-area: portfolio;
+}
+
+
+.nombre {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: red;
 }
 
-.words{
-	margin-top: 60px;
-	width:500px;
-	border-color: red;
-	border-style: none;
-	text-align: justify;
-	height: 200px;
+.footer {
+	grid-area: footer;
+	text-align: center;
+	background-color: #0F0A36;
 }
 
-.picture{
-	width:300px;
-	border-color: yellow;
-	border-style: none;
-	border-radius:  900px;
-	height: 300px;
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: auto;
-}
+@media screen and (max-width: 878px) {
+	.container {
+		grid-template-areas: "header header"
+						"welcome welcome"
+						"picture picture"
+						"about about"
+						"portfolio portfolio"
+						"footer footer";
 
-footer{
-	margin-top: auto;
+
+	}
+
 }
