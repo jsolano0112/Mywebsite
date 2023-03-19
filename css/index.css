@@ -1,6 +1,7 @@
 body{
 	background-color: #1C1469;
 	color: #8074EC;
+	font-family: monospace;
 }
 
 .container {
@@ -8,14 +9,15 @@ body{
 	max-width: 1000px;
 	margin: 20px auto;
 	display: grid;
-	grid-gap: 1px;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(5, auto);
-	grid-template-areas: "header header"
-						"welcome picture"
-						"about about"
-						"portfolio portfolio"
-						"footer footer";
+	grid-gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(6, auto);
+	grid-template-areas: "header header header"
+								"welcome picture picture"
+								"education education skills"
+								"hobbies softsk skills"
+								"portfolio portfolio portfolio"
+								"footer footer footer";
 }
 
 .container .header{
@@ -40,7 +42,6 @@ a:hover {
 	border-style: none;
 	grid-area: welcome;
 	height: 400px;
-	text-align: justify;
 	margin-top: 50px;
 
 }
@@ -48,12 +49,10 @@ a:hover {
 .words {
 	border-color: red;
 	border-style: none;
-	text-align: justify;
-	margin-top: 80px;
 }
 
 
-.picture {
+.container	.picture {
 	border-color: red;
 	border-style: none;  
 	height: 400px;
@@ -65,32 +64,40 @@ a:hover {
 
 }
 
-.about {
-	border-color: green;
-	border-style: double;  
-	height: 500px;
-	grid-area: about;
-	background-color: #0F0A36;
-	padding: 20px;
+.container .education {
+	padding: 10px;
+	border-style: outset;
+	border-color: black;
+	grid-area: education;
+
 }
 
-.education {
-	border-style: dotted;
+.container .hobbies {
+	padding: 10px;
+	border-style: outset;
 	border-color: black;
-	width: 50%;
-	height: 460px;
+	grid-area: hobbies;
 }
 
-.hobbies {
-	border-style: dotted;
+.container .skills {
+	padding: 10px;
+	border-style: outset;
 	border-color: black;
-	width: 50%;
-	height: 460px;
+	grid-area: skills;
 }
+
+.container .softsk {
+	padding: 10px;
+	border-style: outset;
+	border-color: black;
+	grid-area: softsk;
+}
+
 
 .portfolio {
 	border-color: black;
-	border-style: double;  
+	padding: 10px;
+	border-style: outset;
 	height: 500px;
 	grid-area: portfolio;
 }
@@ -110,14 +117,21 @@ a:hover {
 
 @media screen and (max-width: 878px) {
 	.container {
-		grid-template-areas: "header header"
-						"welcome welcome"
-						"picture picture"
-						"about about"
-						"portfolio portfolio"
-						"footer footer";
+		grid-template-areas: "header header header"
+						"welcome welcome welcome"
+						"picture picture picture"
+						"education education education"
+						"hobbies hobbies hobbies"
+						"softsk softsk softsk"
+						"skills skills skills"
+						"portfolio portfolio portfolio"
+						"footer footer footer";
 
 
+	}
+
+	.container .welcome {
+		text-align: center;
 	}
 
 }
