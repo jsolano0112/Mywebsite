@@ -31,6 +31,7 @@ body{
 	 grid-column-end: -1;*/
 }
 
+
 a:hover {
 	text-decoration-line: underline;
   	text-decoration-style: wavy;
@@ -134,4 +135,5 @@ a:hover {
 		text-align: center;
 	}
 
+	
 }
