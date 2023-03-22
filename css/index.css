@@ -27,22 +27,29 @@ body{
 	 margin: auto;
 	 color: #8074EC;
 	 grid-area: header;
-	/* grid-column-start: 1;
-	 grid-column-end: -1;*/
+	 text-decoration: none;
 }
 
 
 a:hover {
-	text-decoration-line: underline;
+		text-decoration-line: underline;
   	text-decoration-style: wavy;
   	text-decoration-color: red;
+  	transition: .4s;
+}
+
+.btn_menu {
+	
+	margin-right: 30px;
+	font-size: 25px;
+	cursor: pointer;
+	display: none;
 }
 
 .container	.welcome {
 	border-color: black;
 	border-style: none;
 	grid-area: welcome;
-	height: 400px;
 	margin-top: 50px;
 
 }
@@ -114,17 +121,21 @@ a:hover {
 	grid-area: footer;
 	text-align: center;
 	background-color: #0F0A36;
+	padding: 10px;
+
 }
 
-@media screen and (max-width: 878px) {
+.footer .icon {	
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 976px) {
 	.container {
 		grid-template-areas: "header header header"
 						"welcome welcome welcome"
 						"picture picture picture"
 						"education education education"
-						"hobbies hobbies hobbies"
-						"softsk softsk softsk"
-						"skills skills skills"
+						"hobbies softsk skills"
 						"portfolio portfolio portfolio"
 						"footer footer footer";
 
@@ -135,5 +146,36 @@ a:hover {
 		text-align: center;
 	}
 
+	.btn_menu {
+		display: inline-flex;
+	}
+
+	.header {
+		position: fixed;
+		width: 100vw;
+		height: calc(100% - 65px);
+		background: black;
+		top: -100vh;
+		text-align: center;
+		transition: all .4s;
+		flex-direction: column;
+	}
+
+
 	
+}
+
+@media screen and (max-width: 743px) {
+		.container {
+		grid-template-areas: "header header header"
+						"welcome welcome welcome"
+						"picture picture picture"
+						"education education education"
+						"hobbies hobbies hobbies"
+						"softsk softsk softsk"
+						"skills skills skills"
+						"portfolio portfolio portfolio"
+						"footer footer footer";
+	}
+
 }
