@@ -189,13 +189,9 @@ li a:hover {
 		position: fixed;
 		width: 50%;
 		height: 70vh;
-		background: #1C1469;
 		top: 40px;
 		transition: all .5s;
 		left: -100%;
-		border-color: #8074EC;
-		border-style: solid;
-
 	}
 
 	.menu_items {
@@ -206,7 +202,11 @@ li a:hover {
 	}
 
 	nav ul li a {
+		background: #1C1469;
 		font-size: 15px;
+		border-color: #8074EC;
+		border-style: solid;
+		border-width: 7px;
 	}
 
 	li a:hover {
