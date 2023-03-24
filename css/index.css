@@ -185,7 +185,7 @@ li a:hover {
 		margin: auto;
 	}
 
-	ul {
+	.menu ul {
 		position: fixed;
 		width: 50%;
 		height: 70vh;
@@ -209,7 +209,7 @@ li a:hover {
 		border-width: 7px;
 	}
 
-	li a:hover {
+	.menu li a:hover {
 		text-decoration-line: none;
 		background-color: black;
 		width: 100%;
