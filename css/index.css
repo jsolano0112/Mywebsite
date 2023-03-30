@@ -158,7 +158,41 @@ body {
 	transition: .4s;
 }
 
+span {
+	animation: jump 1s infinite;
+	transform: translatey(0);
+	display: inline-block;
+	font-size: 28px;
+	color: black;
+	animation-timing-function: ease-in;
+}
 
+span:nth-child(1) {
+	animation-delay: 0;
+}
+
+span:nth-child(2) {
+	animation-delay: 0.2s;
+}
+
+span:nth-child(7) {
+	animation-delay: 0.6s;
+}
+
+@keyframes jump {
+	0% {
+		transform: translatey(0);
+	}
+	30% {
+		transform: translatey(-10px);
+	}
+	50% {
+		transform: translatey(100px);
+	}
+	80% {
+		transform: translatey(110px);
+	}
+}
 
 @media screen and (max-width: 1325px) {
 	.menu_items li {
