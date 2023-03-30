@@ -1,4 +1,4 @@
-body{
+body {
 	background-color: #1C1469;
 	color: #8074EC;
 	font-family: monospace;
@@ -14,29 +14,32 @@ body{
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(6, auto);
 	grid-template-areas: "header header header"
-								"welcome picture picture"
-								"education education skills"
-								"hobbies softsk skills"
-								"portfolio portfolio portfolio"
-								"footer footer footer";
+		"welcome picture picture"
+		"education education skills"
+		"hobbies softsk skills"
+		"portfolio portfolio portfolio"
+		"footer footer footer";
 }
 
 .container .menu {
-	 box-shadow: 1px 2px 5px #150F4F;
-	 max-width: 70%;
-	 border-radius: 25px;
-	 color: #8074EC;
-	 grid-area: header;
-	 background-color: transparent;
-	 display: flex;
-	 margin: auto;
+	box-shadow: 1px 2px 5px #150F4F;
+	max-width: 70%;
+	border-radius: 25px;
+	color: #8074EC;
+	grid-area: header;
+	background-color: transparent;
+	display: flex;
+	position: fixed;
+	left: 35%;
 }
 
 
 .menu_items {
 	display: flex;
 	list-style: none;
-	margin-right: 30px;
+	margin-right: 10px;
+	margin-left: 10px;
+	
 
 }
 
@@ -44,6 +47,7 @@ body{
 	margin: 0 10px;
 	font-size: 18px;
 	margin-top: 10px;
+	
 
 }
 
@@ -51,13 +55,6 @@ body{
 	text-decoration: none;
 	display: block;
 	color: #8074EC;
-}
-
-li a:hover {
-	text-decoration-line: underline;
-  	text-decoration-style: wavy;
-  	text-decoration-color: red;
-  	transition: .4s;
 }
 
 .btn_menu {
@@ -72,7 +69,7 @@ li a:hover {
 	display: none;
 }
 
-.container	.welcome {
+.container .welcome {
 	border-color: black;
 	border-style: none;
 	grid-area: welcome;
@@ -87,9 +84,9 @@ li a:hover {
 }
 
 
-.container	.picture {
+.container .picture {
 	border-color: red;
-	border-style: none;  
+	border-style: none;
 	height: 400px;
 	display: flex;
 	min-height: 100px;
@@ -130,41 +127,57 @@ li a:hover {
 
 
 .portfolio {
-	border-color: black;
-	padding: 10px;
-	border-style: outset;
+	margin-top: 40px;
+	background-color: #0e093a;
 	height: 500px;
 	grid-area: portfolio;
-}
-
-
-.nombre {
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: red;
-}
-
-.footer {
-	grid-area: footer;
+	border-radius: 70px 10px;
+	padding: 70px;
 	text-align: center;
-	background-color: #0F0A36;
+}
+
+.project {
+	text-align: left;
+	border-style: solid;
+	border-color: black .9;
 	padding: 10px;
-
+	margin-top: 10px;
 }
 
-.footer .icon {	
-	margin-top: 20px;
+.project a {
+	text-decoration: none;
+	color: #8074EC;
 }
+
+
+
+.nombre, .project a:hover, li a:hover {
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+	text-decoration-color: red;
+	transition: .4s;
+}
+
+
+
+@media screen and (max-width: 1325px) {
+	.menu_items li {
+		margin: 0 10px;
+		font-size: 16px;
+		margin-top: 10px;
+	}
+}
+
 
 @media screen and (max-width: 976px) {
 	.container {
 		grid-template-areas: "header header header"
-						"welcome welcome welcome"
-						"picture picture picture"
-						"education education education"
-						"hobbies softsk skills"
-						"portfolio portfolio portfolio"
-						"footer footer footer";
+			"welcome welcome welcome"
+			"picture picture picture"
+			"education education education"
+			"hobbies softsk skills"
+			"portfolio portfolio portfolio"
+			"footer footer footer";
 
 
 	}
@@ -173,65 +186,79 @@ li a:hover {
 		text-align: center;
 	}
 
-	
-	.menu {
+	.container {
+		margin: 10px auto;
+	}
+
+	.container .menu {
 		display: flex;
-		width: 8%;
 		position: fixed;
+		left: 90%;
+		box-shadow: none;
 	}
 
 	.btn_menu {
 		display: block;
-		margin: auto;
+		border-radius: 20%;
+		margin-right: 10px;
 	}
+
 
 	.menu ul {
 		position: fixed;
-		width: 50%;
-		height: 70vh;
-		top: 40px;
+		width: 85%;
+		height: 100vh;
 		transition: all .5s;
 		left: -100%;
+		border-radius: 2%;
+		background: rgba(0, 0, 0, .5);
 	}
 
 	.menu_items {
 		display: block;
-		margin: 50px 0;
 		line-height: 90px;
 		text-align: center;
 	}
 
 	nav ul li a {
-		background: #1C1469;
+		border-bottom: 1px solid aliceblue;
 		font-size: 15px;
-		border-color: #8074EC;
-		border-style: solid;
-		border-width: 7px;
-	}
-
-	.menu li a:hover {
-		text-decoration-line: none;
-		background-color: black;
 		width: 100%;
 	}
 
-	#check:checked ~ ul {
-		left: 0;
+	.menu li a:hover {
+		
+		text-decoration-line: none;
+		border-bottom: 1px solid red;
+		
+		border-bottom-style: groove;
+		
+		border-bottom-width: 5px;
+		transition: .4s;
+		border-radius: 2%;
+		width: 100%;
 	}
+
+	#check:checked~ul {
+		left: -20px;
+	}
+
+
+
 	
 }
 
 @media screen and (max-width: 743px) {
-		.container {
+	.container {
 		grid-template-areas: "header header header"
-						"welcome welcome welcome"
-						"picture picture picture"
-						"education education education"
-						"hobbies hobbies hobbies"
-						"softsk softsk softsk"
-						"skills skills skills"
-						"portfolio portfolio portfolio"
-						"footer footer footer";
+			"welcome welcome welcome"
+			"picture picture picture"
+			"education education education"
+			"hobbies hobbies hobbies"
+			"softsk softsk softsk"
+			"skills skills skills"
+			"portfolio portfolio portfolio"
+			"footer footer footer";
 	}
 
 }
