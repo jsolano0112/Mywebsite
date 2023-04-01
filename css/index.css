@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
 body {
 	background-color: #1C1469;
 	color: #8074EC;
@@ -12,9 +15,10 @@ body {
 	display: grid;
 	grid-gap: 10px;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(6, auto);
+	grid-template-rows: repeat(7, auto);
 	grid-template-areas: "header header header"
 		"welcome picture picture"
+		"welcome2 picture picture"
 		"education education skills"
 		"hobbies softsk skills"
 		"portfolio portfolio portfolio"
@@ -39,7 +43,7 @@ body {
 	list-style: none;
 	margin-right: 10px;
 	margin-left: 10px;
-	
+
 
 }
 
@@ -47,7 +51,7 @@ body {
 	margin: 0 10px;
 	font-size: 18px;
 	margin-top: 10px;
-	
+
 
 }
 
@@ -73,10 +77,14 @@ body {
 	border-color: black;
 	border-style: none;
 	grid-area: welcome;
-	margin-top: 50px;
+	margin-top: 80px;
 
 }
 
+.container .welcome2 {
+	grid-area: welcome2;
+	margin-bottom: 120px;
+}
 
 .words {
 	border-color: red;
@@ -93,6 +101,7 @@ body {
 	grid-area: picture;
 	padding: 10px;
 	margin: auto;
+	margin-top: 70px;
 
 }
 
@@ -139,9 +148,10 @@ body {
 .project {
 	text-align: left;
 	border-style: solid;
-	border-color: black .9;
+	border-color: rgb(73, 72, 72);
 	padding: 10px;
 	margin-top: 10px;
+	position: relative;
 }
 
 .project a {
@@ -149,9 +159,35 @@ body {
 	color: #8074EC;
 }
 
+.project .content {
+	position: absolute;
+	top: 15px;
+	padding: 15px
+}
 
+svg,
+rect {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	fill: transparent;
+}
 
-.nombre, .project a:hover, li a:hover {
+rect {
+	stroke: black;
+	stroke-width: 3;
+	stroke-dasharray: 400;
+	animation: animate 4s linear infinite;
+}
+
+.ocultomenu {
+	display: none;
+}
+
+.nombre,
+.project a:hover,
+li a:hover {
 	text-decoration-line: underline;
 	text-decoration-style: wavy;
 	text-decoration-color: red;
@@ -162,9 +198,10 @@ span {
 	animation: jump 1s infinite;
 	transform: translatey(0);
 	display: inline-block;
-	font-size: 28px;
+	font-size: 15px;
 	color: black;
 	animation-timing-function: ease-in;
+	font-family: 'Press Start 2P', cursive;
 }
 
 span:nth-child(1) {
@@ -174,8 +211,32 @@ span:nth-child(1) {
 span:nth-child(2) {
 	animation-delay: 0.2s;
 }
+span:nth-child(3) {
+	animation-delay: 0.25s;
+}
+
+span:nth-child(4) {
+	animation-delay: 0.2s;
+}
+
+span:nth-child(5) {
+	animation-delay: 0.4s;
+}
+
+span:nth-child(6) {
+	animation-delay: 0.5s;
+}
 
 span:nth-child(7) {
+	animation-delay: 0.6s;
+}
+span:nth-child(8) {
+	animation-delay: 0.2s;
+}
+span:nth-child(9) {
+	animation-delay: 0.4s;
+}
+span:nth-child(10) {
 	animation-delay: 0.6s;
 }
 
@@ -183,14 +244,27 @@ span:nth-child(7) {
 	0% {
 		transform: translatey(0);
 	}
+
 	30% {
 		transform: translatey(-10px);
 	}
+
 	50% {
 		transform: translatey(100px);
 	}
-	80% {
+
+	70% {
 		transform: translatey(110px);
+	}
+}
+
+@keyframes animate {
+	0% {
+		stroke-dashoffset: 800;
+	}
+
+	100% {
+		stroke-dashoffset: 0;
 	}
 }
 
@@ -208,6 +282,7 @@ span:nth-child(7) {
 		grid-template-areas: "header header header"
 			"welcome welcome welcome"
 			"picture picture picture"
+			"welcome2 welcome2 welcome2"
 			"education education education"
 			"hobbies softsk skills"
 			"portfolio portfolio portfolio"
@@ -222,6 +297,14 @@ span:nth-child(7) {
 
 	.container {
 		margin: 10px auto;
+	}
+
+	.ocultomenu {
+		display: block;
+	}
+
+	.muestromenu {
+		display: none;
 	}
 
 	.container .menu {
@@ -245,7 +328,7 @@ span:nth-child(7) {
 		transition: all .5s;
 		left: -100%;
 		border-radius: 2%;
-		background: rgba(0, 0, 0, .5);
+		background: rgba(0, 0, 0, .9);
 	}
 
 	.menu_items {
@@ -261,12 +344,12 @@ span:nth-child(7) {
 	}
 
 	.menu li a:hover {
-		
+
 		text-decoration-line: none;
 		border-bottom: 1px solid red;
-		
+
 		border-bottom-style: groove;
-		
+
 		border-bottom-width: 5px;
 		transition: .4s;
 		border-radius: 2%;
@@ -278,8 +361,15 @@ span:nth-child(7) {
 	}
 
 
+	.welcome2 {
+		margin: auto;
 
-	
+	}
+
+	.picture {
+		position: relative;
+	}
+
 }
 
 @media screen and (max-width: 743px) {
@@ -287,6 +377,7 @@ span:nth-child(7) {
 		grid-template-areas: "header header header"
 			"welcome welcome welcome"
 			"picture picture picture"
+			"welcome2 welcome2 welcome2"
 			"education education education"
 			"hobbies hobbies hobbies"
 			"softsk softsk softsk"
