@@ -1,13 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+	--letter-color: #8074EC;
+	--font: 1.7rem;
+	--padding: 2rem;
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-  }
+}
+
+html {
+	font-size: 62.5%;
+}
 
 body {
 	background-color: #1C1469;
-	color: #8074EC;
+	color: var(--letter-color);
 	font-family: monospace;
 }
 
@@ -17,7 +28,7 @@ body {
 	max-width: 1000px;
 	margin: 20px auto;
 	display: grid;
-	grid-gap: 10px;
+	grid-gap: 1rem;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(7, auto);
 	grid-template-areas: "header header header"
@@ -35,11 +46,12 @@ body {
 	width: 100%;
 	grid-area: header;
 }
+
 .container .menu {
 	box-shadow: 1px 2px 5px #150F4F;
 	border-radius: 25px;
 	background-color: transparent;
-	min-width: 35%;	
+	min-width: 35%;
 	position: fixed;
 }
 
@@ -55,15 +67,15 @@ body {
 }
 
 .menu_items li {
-	margin: 10px 10px;
-	font-size: 18px;
-	
+	margin: 1rem 1rem;
+	font-size: 1.8rem;
+
 }
 
 .menu_items li a {
 	text-decoration: none;
 	display: inline-block;
-	color: #8074EC;
+	color: var(--letter-color);
 }
 
 .btn_menu {
@@ -76,7 +88,28 @@ body {
 	border-style: none;
 	grid-area: welcome;
 	margin-top: 80px;
+}
 
+h2 {
+	font-size: 3rem;
+}
+
+h5 {
+	font-size: 2rem;
+}
+
+p,
+.skills li,
+h6 {
+	font-size: var(--font);
+}
+
+.skills li {
+	list-style: none;
+}
+
+.skills  li::before {
+	content: '⁕ ';
 }
 
 .container .welcome2 {
@@ -97,38 +130,33 @@ body {
 	display: flex;
 	min-height: 100px;
 	grid-area: picture;
-	padding: 10px;
 	margin: auto;
-	margin-top: 70px;
+	margin-top: 5rem;
 
+}
+
+.container .education,
+.hobbies,
+.skills,
+.softsk {
+	padding: var(--padding);
+	border-style: outset;
+	border-color: black;
 }
 
 .container .education {
-	padding: 10px;
-	border-style: outset;
-	border-color: black;
 	grid-area: education;
-
 }
 
 .container .hobbies {
-	padding: 10px;
-	border-style: outset;
-	border-color: black;
 	grid-area: hobbies;
 }
 
 .container .skills {
-	padding: 10px;
-	border-style: outset;
-	border-color: black;
 	grid-area: skills;
 }
 
 .container .softsk {
-	padding: 10px;
-	border-style: outset;
-	border-color: black;
 	grid-area: softsk;
 }
 
@@ -136,25 +164,25 @@ body {
 .portfolio {
 	margin-top: 40px;
 	background-color: #0e093a;
-	height: 500px;
 	grid-area: portfolio;
-	border-radius: 70px 10px;
+	border-radius: 7rem 1rem;
 	padding: 70px;
 	text-align: center;
+
 }
 
 .project {
 	text-align: left;
 	border-style: solid;
 	border-color: rgb(73, 72, 72);
-	padding: 10px;
-	margin-top: 10px;
+	padding: 20px;
+	margin-top: 1rem;
 	position: relative;
 }
 
 .project a {
 	text-decoration: none;
-	color: #8074EC;
+	color: var(--letter-color);
 }
 
 .project .content {
@@ -201,4 +229,3 @@ span {
 	animation-timing-function: ease-in;
 	font-family: 'Press Start 2P', cursive;
 }
-

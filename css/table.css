@@ -1,0 +1,31 @@
+
+@media screen and (max-width: 976px) {
+	.container {
+		grid-template-areas: "header header header"
+			"welcome welcome welcome"
+			"picture picture picture"
+			"welcome2 welcome2 welcome2"
+			"education education education"
+			"hobbies softsk skills"
+			"portfolio portfolio portfolio"
+			"footer footer footer";
+
+
+	}
+
+	
+	.welcome2 {
+		margin: auto;
+        position: relative;
+        top: -110%;
+	}
+	
+	.container .welcome {
+		text-align: center;
+	}
+
+	.container {
+		margin: 10px auto;
+	}
+
+}
