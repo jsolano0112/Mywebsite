@@ -2,6 +2,7 @@
 
 :root {
 	--letter-color: #8074EC;
+	--letter-line: #D9BF27;
 	--font: 1.7rem;
 	--padding: 2rem;
 }
@@ -22,7 +23,7 @@ body {
 	font-family: monospace;
 }
 
-
+/*MAIN*/
 .container {
 	width: 90%;
 	max-width: 1000px;
@@ -40,6 +41,7 @@ body {
 		"footer footer footer";
 }
 
+/*MENU*/
 .container .box_menu {
 	display: flex;
 	justify-content: center;
@@ -83,12 +85,14 @@ body {
 	display: none;
 }
 
+/*MAIN*/
 .container .welcome {
 	border-color: black;
 	border-style: none;
 	grid-area: welcome;
 	margin-top: 80px;
 }
+
 
 h2 {
 	font-size: 3rem;
@@ -98,30 +102,29 @@ h5 {
 	font-size: 2rem;
 }
 
-p,
-.skills li,
-h6 {
-	font-size: var(--font);
-}
-
-.skills li {
-	list-style: none;
-}
-
-.skills  li::before {
-	content: '⁕ ';
-}
 
 .container .welcome2 {
 	grid-area: welcome2;
 	margin-bottom: 120px;
 }
 
+span {
+	animation: jump 1s infinite;
+	transform: translatey(0);
+	display: inline-block;
+	font-size: 15px;
+	color: #DFCE6B;
+	animation-timing-function: cubic-bezier(0,.77,.55,.02);
+	font-family: 'Press Start 2P', cursive;
+}
+
+/*STATIC*/
+
 .words {
 	border-color: red;
 	border-style: none;
+	color: var(--letter-line);
 }
-
 
 .container .picture {
 	border-color: red;
@@ -156,9 +159,26 @@ h6 {
 	grid-area: skills;
 }
 
+p,
+.skills li,
+h6 {
+	font-size: var(--font);
+}
+
+.skills li {
+	list-style: none;
+}
+
+.skills  li::before {
+	content: '⁕ ';
+}
+
+
 .container .softsk {
 	grid-area: softsk;
 }
+
+/*PROJECTS*/
 
 
 .portfolio {
@@ -211,21 +231,11 @@ rect {
 	display: none;
 }
 
-.nombre,
 .project a:hover,
 li a:hover {
 	text-decoration-line: underline;
 	text-decoration-style: wavy;
-	text-decoration-color: red;
+	text-decoration-color: var(--letter-line);
 	transition: .4s;
 }
 
-span {
-	animation: jump 1s infinite;
-	transform: translatey(0);
-	display: inline-block;
-	font-size: 15px;
-	color: black;
-	animation-timing-function: ease-in;
-	font-family: 'Press Start 2P', cursive;
-}
