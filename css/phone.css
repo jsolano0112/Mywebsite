@@ -60,7 +60,7 @@
 	.menu li a:hover {
 
 		text-decoration-line: none;
-		border-bottom: 1px solid red;
+		border-bottom: 1px solid var(--letter-line);
 
 		border-bottom-style: groove;
 

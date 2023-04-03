@@ -2,7 +2,7 @@
 
 :root {
 	--letter-color: #8074EC;
-	--letter-line: #D9BF27;
+	--letter-line: #DFCE6B;
 	--font: 1.7rem;
 	--padding: 2rem;
 }
@@ -112,7 +112,7 @@ span {
 	animation: jump 1s infinite;
 	transform: translatey(0);
 	display: inline-block;
-	font-size: 15px;
+	font-size: 2.3rem;
 	color: #DFCE6B;
 	animation-timing-function: cubic-bezier(0,.77,.55,.02);
 	font-family: 'Press Start 2P', cursive;
