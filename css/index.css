@@ -191,13 +191,20 @@ h6 {
 
 }
 
+.portfolio_container {
+	justify-content: center;
+	display: inline;
+}
+
 .project {
 	text-align: left;
-	border-style: solid;
-	border-color: rgb(73, 72, 72);
-	padding: 20px;
 	margin-top: 1rem;
 	position: relative;
+}
+
+.project:hover {
+	transition: .9s;
+	padding: 2rem;
 }
 
 .project a {
@@ -205,24 +212,31 @@ h6 {
 	color: var(--letter-color);
 }
 
-.project .content {
+.project_content {
 	position: absolute;
-	top: 15px;
-	padding: 15px
+	top: 1.5rem;
+	left: 1.5rem;
+	right: 1.5rem;
+	bottom: 1.5rem;
+	padding:2.5rem;
+	margin: auto;
+	border: 2px solid var(--letter-color);
+
 }
 
 svg,
 rect {
-	top: 0;
-	left: 0;
+	top: 0rem;
+	left: 0rem;
 	width: 100%;
 	height: 100%;
 	fill: transparent;
+	padding: 2rem;
 }
 
 rect {
-	stroke: black;
-	stroke-width: 3;
+	stroke: var(--letter-line);
+	stroke-width: 4;
 	stroke-dasharray: 400;
 	animation: animate 4s linear infinite;
 }
