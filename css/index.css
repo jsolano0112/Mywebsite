@@ -3,6 +3,7 @@
 :root {
 	--letter-color: #8074EC;
 	--letter-line: #DFCE6B;
+	--bg: #1C1469;
 	--font: 1.7rem;
 	--padding: 2rem;
 }
@@ -18,7 +19,7 @@ html {
 }
 
 body {
-	background-color: #1C1469;
+	background-color: var(--bg);
 	color: var(--letter-color);
 	font-family: monospace;
 }
@@ -114,7 +115,7 @@ span {
 	display: inline-block;
 	font-size: 2.3rem;
 	color: #DFCE6B;
-	animation-timing-function: cubic-bezier(0,.77,.55,.02);
+	animation-timing-function: cubic-bezier(0, .77, .55, .02);
 	font-family: 'Press Start 2P', cursive;
 }
 
@@ -169,8 +170,8 @@ h6 {
 	list-style: none;
 }
 
-.skills  li::before {
-	content: '⁕ ';
+.skills li::before {
+	content: '⚡ ';
 }
 
 
@@ -182,74 +183,49 @@ h6 {
 
 
 .portfolio {
-	margin-top: 40px;
 	background-color: #0e093a;
 	grid-area: portfolio;
 	border-radius: 7rem 1rem;
-	padding: 70px;
+	padding: 7rem;
 	text-align: center;
 
 }
 
-.portfolio_container {
-	justify-content: center;
-	display: inline;
-}
-
-.project {
-	text-align: left;
-	margin-top: 1rem;
-	position: relative;
-}
-
-.project:hover {
-	transition: .9s;
-	padding: 2rem;
-}
-
-.project a {
-	text-decoration: none;
-	color: var(--letter-color);
-}
-
-.project_content {
-	position: absolute;
-	top: 1.5rem;
-	left: 1.5rem;
-	right: 1.5rem;
-	bottom: 1.5rem;
-	padding:2.5rem;
-	margin: auto;
-	border: 2px solid var(--letter-color);
-
-}
-
-svg,
-rect {
-	top: 0rem;
-	left: 0rem;
+.portfolio .portfolio_container {
+	margin-top: 3rem; 	
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	width: 100%;
-	height: 100%;
-	fill: transparent;
-	padding: 2rem;
 }
 
-rect {
-	stroke: var(--letter-line);
-	stroke-width: 4;
-	stroke-dasharray: 400;
-	animation: animate 4s linear infinite;
+.portfolio .portfolio_project {
+	text-align: left;
+	color: var(--letter-color);
+	padding: 3rem;
+}
+
+.portfolio_project a {
+	text-decoration: none;
+	
+	color:var(--letter-color);
+}
+
+.portfolio_project a::before {
+	content: '💡 ';
+}
+.portfolio_project:hover {
+	background-color: var(--letter-line);
+	transition: .6s;
+	border-radius: 3rem;
 }
 
 .ocultomenu {
 	display: none;
 }
 
-.project a:hover,
 li a:hover {
 	text-decoration-line: underline;
 	text-decoration-style: wavy;
 	text-decoration-color: var(--letter-line);
 	transition: .4s;
 }
-

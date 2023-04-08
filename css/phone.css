@@ -73,5 +73,10 @@
 	#check:checked~ul {
 		left: -20px;
 	}
+	
+	.portfolio .portfolio_container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
 
 }
