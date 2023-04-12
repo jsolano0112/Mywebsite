@@ -53,9 +53,12 @@ body {
 .container .menu {
 	box-shadow: 1px 2px 5px #150F4F;
 	border-radius: 25px;
-	background-color: transparent;
+	-webkit-backdrop-filter: blur(.2rem);
+	backdrop-filter: blur(.2rem);
+	background-color: rgba(243, 243, 243, 0.2);
 	min-width: 35%;
 	position: fixed;
+	
 }
 
 #check {
@@ -188,14 +191,19 @@ h6 {
 	border-radius: 7rem 1rem;
 	padding: 7rem;
 	text-align: center;
+	display: flex;
+	justify-content: center;
+    flex-wrap: wrap
+
 
 }
 
 .portfolio .portfolio_container {
 	margin-top: 3rem; 	
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 45% 45%;
 	width: 100%;
+	gap: 3rem;
 }
 
 .portfolio .portfolio_project {
