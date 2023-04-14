@@ -53,9 +53,9 @@ body {
 .container .menu {
 	box-shadow: 1px 2px 5px #150F4F;
 	border-radius: 25px;
-	-webkit-backdrop-filter: blur(.2rem);
+	/* -webkit-backdrop-filter: blur(.2rem);
 	backdrop-filter: blur(.2rem);
-	background-color: rgba(243, 243, 243, 0.2);
+	background-color: rgba(243, 243, 243, 0.2); */
 	min-width: 35%;
 	position: fixed;
 	
@@ -201,7 +201,7 @@ h6 {
 .portfolio .portfolio_container {
 	margin-top: 3rem; 	
 	display: grid;
-	grid-template-columns: 45% 45%;
+	grid-template-columns: 50% 50%;
 	width: 100%;
 	gap: 3rem;
 }
