@@ -53,12 +53,15 @@ body {
 .container .menu {
 	box-shadow: 1px 2px 5px #150F4F;
 	border-radius: 25px;
-	/* -webkit-backdrop-filter: blur(.2rem);
-	backdrop-filter: blur(.2rem);
-	background-color: rgba(243, 243, 243, 0.2); */
 	min-width: 35%;
 	position: fixed;
 	
+}
+
+.scrollC {
+	/* -webkit-backdrop-filter: blur(.2rem);
+	backdrop-filter: blur(.2rem);
+	background-color: rgba(243, 243, 243, 0.2);  */
 }
 
 #check {
