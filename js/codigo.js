@@ -1,10 +1,50 @@
 const menu = document.getElementById('caja-menu')
+const contenedorProjectos = document.getElementById('portfolio-c')
 
-window.addEventListener('scroll', () =>{
-    if (window.scrollY >= 50){
+let proyectosLista = []
+let opcionDeProyecto
+
+
+//Clase para proyecto
+class Proyecto {
+    constructor(nombre, link, imagen, texto) {
+        this.nombre = nombre
+        this.link = link
+        this.imagen = imagen
+        this.texto = texto
+    }
+}
+
+let pizarra = new Proyecto('PIZARRA', 'https://jsolano0112.github.io/Pizarra/', '', '')
+let appControlGastos = new Proyecto('APP CONTROL GASTOS', 'https://github.com/jsolano0112/ControlGastos.git', '', '')
+let gusanoPy = new Proyecto('GUSANITO-PYTHON', 'https://github.com/jsolano0112/Gusanito.git', '', '')
+
+proyectosLista.push(pizarra, appControlGastos, gusanoPy)
+
+function mostrarProjectos() {
+
+    proyectosLista.forEach((Proyecto) => {
+        //por cada proyecto que existe, hacer lo siguiente:
+        opcionDeProyecto = `
+        <article class="portfolio_project">
+			<a href=${Proyecto.link}>
+				<h6>${Proyecto.nombre}</h6>
+			</a>
+            <p>${Proyecto.texto}</p>
+			<img src=${Proyecto.imagen} alt=${Proyecto.nombre}>
+		</article>
+        `
+        contenedorProjectos.innerHTML += opcionDeProyecto
+    })
+}
+//menu
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= 50) {
         menu.classList.add('scrollC')
 
-    }else{
+    } else {
         menu.classList.remove('scrollC')
     }
 })
+
+window.addEventListener('load', mostrarProjectos)

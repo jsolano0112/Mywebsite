@@ -55,6 +55,7 @@ body {
 	border-radius: 25px;
 	min-width: 35%;
 	position: fixed;
+	background-color: var(--bg);
 	
 }
 
