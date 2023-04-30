@@ -214,6 +214,7 @@ h6 {
 	text-align: left;
 	color: var(--letter-color);
 	padding: 3rem;
+	display: block;
 }
 
 .portfolio_project a {
@@ -229,6 +230,10 @@ h6 {
 	background-color: var(--letter-line);
 	transition: .6s;
 	border-radius: 3rem;
+}
+
+.portfolio_project img{
+	margin: auto;
 }
 
 .ocultomenu {
