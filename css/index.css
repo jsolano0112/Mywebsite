@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+html{
+	 scroll-behavior: smooth;
+}
 :root {
 	--letter-color: #8074EC;
 	--letter-line: #DFCE6B;
