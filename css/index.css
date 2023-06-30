@@ -231,7 +231,7 @@ h6 {
 }
 
 .portfolio_project {
-	background-color: #66347F;
+	background-color: #37306B;
 	border-radius: 2rem;
 	opacity: background-color .2;
 	text-align: left;
@@ -242,7 +242,6 @@ h6 {
 
 .portfolio_project a {
 	text-decoration: none;
-
 	color: white;
 }
 
@@ -267,10 +266,14 @@ h6 {
 	text-align: center;
 }
 
-.c-four-icons {
+.c-four-icons{
 	margin-top: 3rem;
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	gap: 5rem;
+	gap: 2rem;	
+}
+
+.c-four-icons li{
+	text-decoration: none;
+	display: inline-block;
 }
