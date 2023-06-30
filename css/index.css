@@ -30,7 +30,7 @@ body {
 
 .one, .two, .three {
 	padding: 3rem;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -231,6 +231,9 @@ h6 {
 }
 
 .portfolio_project {
+	background-color: #66347F;
+	border-radius: 2rem;
+	opacity: background-color .2;
 	text-align: left;
 	padding: 3rem;
 	display: flex;
@@ -258,12 +261,6 @@ h6 {
 }
 
 
-li a:hover {
-	text-decoration-line: underline;
-	text-decoration-style: wavy;
-	text-decoration-color: var(--letter-line);
-	transition: .4s;
-}
 
 .four {
 	padding: 3rem;
