@@ -1,29 +1,10 @@
-@media screen and (max-width: 976px) {
-	.container {
-		grid-template-areas: "header header header"
-			"welcome welcome welcome"
-			"picture picture picture"
-			"welcome2 welcome2 welcome2"
-			"education education education"
-			"hobbies softsk skills"
-			"portfolio portfolio portfolio"
-			"footer footer footer";
-
+@media screen and (max-width: 885px) {
+	.c-two-one {
+		
+		grid-template-areas: "c-two-education c-two-education c-two-education"
+			"c-two-softsk c-two-softsk c-two-softsk"
+			" c-two-skills  c-two-skills  c-two-skills"
 
 	}
-
-	
-	.welcome2 {
-		margin: auto;
-	}
-	
-	.container .welcome {
-		text-align: center;
-	}
-
-	.container {
-		margin: 10px auto;
-	}
-
 
 }

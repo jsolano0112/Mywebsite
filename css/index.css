@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-html{
-	 scroll-behavior: smooth;
+
+html {
+	scroll-behavior: smooth;
 }
+
 :root {
 	--letter-color: #8074EC;
 	--letter-line: #DFCE6B;
@@ -22,34 +24,131 @@ html {
 
 body {
 	background-color: var(--bg);
-	color: var(--letter-color);
+	color: white;
 	font-family: monospace;
 }
 
-/*MAIN*/
-.container {
-	width: 90%;
-	max-width: 1000px;
-	margin: 20px auto;
-	display: grid;
-	grid-gap: 1rem;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(7, auto);
-	grid-template-areas: "header header header"
-		"welcome picture picture"
-		"welcome2 picture picture"
-		"education education skills"
-		"hobbies softsk skills"
-		"portfolio portfolio portfolio"
-		"footer footer footer";
+.one, .two, .three {
+	padding: 3rem;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	scroll-snap-align: start;
+
 }
 
-/*MENU*/
+.one {
+	background-color: #37306B;
+}
+
+.two {
+	background-color: #66347F;
+	display: grid;
+	grid-gap: 3rem;
+	grid-template-columns: 65% 35%;
+}
+
+.three {
+	background-color: #9E4784;
+}
+
+.four {
+	background-color: #37306B;
+	scroll-snap-align: start;
+}
+
+
+/*MAIN*/
+.container {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+
+}
+
+#navigation {
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    background-color: #37306B;
+}
+
+#hamburger-content {
+    cursor: pointer;
+}
+
+
+
+#menu {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1C1469;
+    transition: top .5s;
+}
+
+#menu nav {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#menu nav ul {
+    list-style: none;
+    display: block;
+}
+
+#menu nav ul li {
+    margin-top: 0;
+    margin-top: 100px;
+    opacity: 0;
+    transition: margin-top .8s, opacity .8s;
+}
+
+#menu nav ul li a {
+    color: white;
+    font-size: 6em;
+    text-decoration: none;
+    opacity: .3;
+    transition: opacity .5s;
+}
+
+#menu nav ul li a:hover {
+    opacity: 1;
+}
+#close {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    cursor: pointer;
+}
+
+#close img {
+    width: 3rem;
+}
+
+#menu.open {
+    top: 0;
+}
+
+#menu.open nav ul li {
+    margin-top: 0;
+    opacity: 1;
+}
+
+
+/* MENU
 .container .box_menu {
 	display: flex;
 	justify-content: center;
 	width: 100%;
 	grid-area: header;
+	margin-top: 2rem;
 }
 
 .container .menu {
@@ -58,14 +157,9 @@ body {
 	min-width: 35%;
 	position: fixed;
 	background-color: var(--bg);
-	
+
 }
 
-.scrollC {
-	/* -webkit-backdrop-filter: blur(.2rem);
-	backdrop-filter: blur(.2rem);
-	background-color: rgba(243, 243, 243, 0.2);  */
-}
 
 #check {
 	display: none;
@@ -93,19 +187,15 @@ body {
 .btn_menu {
 	cursor: pointer;
 	display: none;
-}
+} */
 
-/*MAIN*/
-.container .welcome {
-	border-color: black;
-	border-style: none;
-	grid-area: welcome;
-	margin-top: 80px;
-}
+.c-one-welcome {
+	text-align: center;
 
+}
 
 h2 {
-	font-size: 3rem;
+	font-size: 6rem;
 }
 
 h5 {
@@ -113,139 +203,124 @@ h5 {
 }
 
 
-.container .welcome2 {
-	grid-area: welcome2;
-	margin-bottom: 120px;
-}
-
 span {
 	animation: jump 1s infinite;
 	transform: translatey(0);
 	display: inline-block;
-	font-size: 2.3rem;
-	color: #DFCE6B;
+	font-size: 3.2rem;
+	color: #D27685;
 	animation-timing-function: cubic-bezier(0, .77, .55, .02);
 	font-family: 'Press Start 2P', cursive;
 }
 
-/*STATIC*/
-
-.words {
-	border-color: red;
-	border-style: none;
-	color: var(--letter-line);
+.c-two-one {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas: "c-two-education c-two-education c-two-skills"
+		"c-two-softsk c-two-softsk c-two-skills"
 }
 
-.container .picture {
-	border-color: red;
-	border-style: none;
-	height: 400px;
-	display: flex;
-	min-height: 100px;
-	grid-area: picture;
-	margin: auto;
-	margin-top: 5rem;
-
-}
-
-.container .education,
-.hobbies,
-.skills,
-.softsk {
+.container .c-two-education,
+.c-two-skills,
+.c-two-softsk {
 	padding: var(--padding);
 	border-style: outset;
 	border-color: black;
 }
 
-.container .education {
-	grid-area: education;
+.container .c-two-education {
+	grid-area: c-two-education;
 }
 
-.container .hobbies {
-	grid-area: hobbies;
-}
-
-.container .skills {
-	grid-area: skills;
+.container .c-two-skills {
+	grid-area: c-two-skills;
 }
 
 p,
-.skills li,
+.c-two-skills li,
 h6 {
 	font-size: var(--font);
 }
 
-.skills li {
+.c-two-skills li {
 	list-style: none;
 }
 
-.skills li::before {
+.c-two-skills li::before {
 	content: '⚡ ';
 }
 
 
-.container .softsk {
-	grid-area: softsk;
+.container .c-two-softsk {
+	grid-area: c-two-softsk;
 }
 
-/*PROJECTS*/
 
-
-.portfolio {
-	background-color: #0e093a;
-	grid-area: portfolio;
-	border-radius: 7rem 1rem;
-	padding: 7rem;
-	text-align: center;
+.c-two-two {
 	display: flex;
 	justify-content: center;
-    flex-wrap: wrap
+}
+/*PROJECTS*/
 
-
+.c-three h5 {
+	text-align: center;
+	font-size: 2.7rem;
 }
 
-.portfolio .portfolio_container {
-	margin-top: 3rem; 	
-	display: grid;
-	grid-template-columns: 50% 50%;
-	width: 100%;
-	gap: 3rem;
+.portfolio_container {
+	margin-top: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5rem;
 }
 
-.portfolio .portfolio_project {
+.portfolio_project {
 	text-align: left;
-	color: var(--letter-color);
 	padding: 3rem;
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 }
 
 .portfolio_project a {
 	text-decoration: none;
-	
-	color:var(--letter-color);
+
+	color: white;
 }
 
 .portfolio_project a::before {
 	content: '💡 ';
 }
+
 .portfolio_project:hover {
 	background-color: var(--letter-line);
 	transition: .6s;
 	border-radius: 3rem;
 }
 
-.portfolio_project img{
+.portfolio_project img {
 	margin: auto;
 }
 
-.ocultomenu {
-	display: none;
-}
 
 li a:hover {
 	text-decoration-line: underline;
 	text-decoration-style: wavy;
 	text-decoration-color: var(--letter-line);
 	transition: .4s;
+}
+
+.four {
+	padding: 3rem;
+	text-align: center;
+}
+
+.c-four-icons {
+	margin-top: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5rem;
 }

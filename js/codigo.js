@@ -4,6 +4,16 @@ const contenedorProjectos = document.getElementById('portfolio-c')
 let proyectosLista = []
 let opcionDeProyecto
 
+//boton cerrar
+// $(function(){
+//     $("hamburger-content").click(function(){
+//         $("menu").addClass('open')
+//     })
+//     $("close").click(function(){
+//         $("menu").removeClass('open')
+//     })
+// })
+
 
 //Clase para proyecto
 class Proyecto {
@@ -48,5 +58,6 @@ window.addEventListener('scroll', () => {
         menu.classList.remove('scrollC')
     }
 })
+
 
 window.addEventListener('load', mostrarProjectos)
