@@ -4,17 +4,6 @@ const contenedorProjectos = document.getElementById('portfolio-c')
 let proyectosLista = []
 let opcionDeProyecto
 
-//boton cerrar
-// $(function(){
-//     $("hamburger-content").click(function(){
-//         $("menu").addClass('open')
-//     })
-//     $("close").click(function(){
-//         $("menu").removeClass('open')
-//     })
-// })
-
-
 //Clase para proyecto
 class Proyecto {
     constructor(nombre, link, imagen, ancho, alto, texto) {
@@ -49,15 +38,6 @@ function mostrarProjectos() {
         contenedorProjectos.innerHTML += opcionDeProyecto
     })
 }
-//menu
-window.addEventListener('scroll', () => {
-    if (window.scrollY >= 50) {
-        menu.classList.add('scrollC')
-
-    } else {
-        menu.classList.remove('scrollC')
-    }
-})
 
 
 window.addEventListener('load', mostrarProjectos)
