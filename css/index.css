@@ -5,9 +5,9 @@ html {
 }
 
 :root {
-	--letter-color: #8074EC;
+	/* --letter-color: #8074EC;
 	--letter-line: #DFCE6B;
-	--bg: #1C1469;
+	--bg: #1C1469; */
 	--font: 1.7rem;
 	--padding: 2rem;
 }
@@ -79,6 +79,7 @@ body {
 	background-color: #37306B;
 	clip-path: circle(25px at calc(100% - 45px) 45px);
 	transition: all 0.3s ease-in-out;
+	z-index: 1;
 }
 
 #active:checked ~ .wrapper {
@@ -135,81 +136,6 @@ input {
 	display: none;
 }
 
-/* #navigation {
-    position: fixed;
-    width: 100%;
-    padding: 1rem;
-    background-color: transparent;
-}
-
-#hamburger-content {
-    cursor: pointer;
-}
-
-
-
-#menu {
-    position: fixed;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #1C1469;
-    transition: top .5s;
-}
-
-#menu nav {
-    position: absolute;
-    z-index: 10;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#menu nav ul {
-    list-style: none;
-    display: block;
-}
-
-#menu nav ul li {
-    margin-top: 0;
-    margin-top: 100px;
-    opacity: 0;
-    transition: margin-top .8s, opacity .8s;
-}
-
-#menu nav ul li a {
-    color: white;
-    font-size: 6em;
-    text-decoration: none;
-    opacity: .3;
-    transition: opacity .5s;
-}
-
-#menu nav ul li a:hover {
-    opacity: 1;
-}
-
-#close {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    cursor: pointer;
-}
-
-#close img {
-    width: 3rem;
-}
-
-#menu.open {
-    top: 0;
-}
-
-#menu.open nav ul li {
-    margin-top: 0;
-    opacity: 1;
-} */
-
 
 .c-one-welcome {
 	text-align: center;
@@ -223,7 +149,6 @@ h2 {
 h5 {
 	font-size: 2rem;
 }
-
 
 span {
 	animation: jump 1s infinite;
