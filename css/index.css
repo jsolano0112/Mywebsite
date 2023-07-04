@@ -5,9 +5,12 @@ html {
 }
 
 :root {
-	/* --letter-color: #8074EC;
-	--letter-line: #DFCE6B;
-	--bg: #1C1469; */
+	--b1: #37306B;
+	--b2: #66347F;
+	--b3: #9E4784;
+	--b4: #DFCE6B;
+	--b5: #D27685;
+	--color: white;
 	--font: 1.7rem;
 	--padding: 2rem;
 }
@@ -23,8 +26,8 @@ html {
 }
 
 body {
-	background-color: var(--bg);
-	color: white;
+	background-color: var(--b1);
+	color: var(--color);
 	font-family: monospace;
 }
 
@@ -41,22 +44,22 @@ body {
 }
 
 .one {
-	background-color: #37306B;
+	background-color: var(--b1);
 }
 
 .two {
-	background-color: #66347F;
+	background-color: var(--b2);
 	display: grid;
 	grid-gap: 3rem;
 	grid-template-columns: 65% 35%;
 }
 
 .three {
-	background-color: #9E4784;
+	background-color: var(--b3);
 }
 
 .four {
-	background-color: #37306B;
+	background-color: var(--b1);
 	scroll-snap-align: start;
 }
 
@@ -76,17 +79,18 @@ body {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: #37306B;
+	background-color: var(--b1);
 	clip-path: circle(25px at calc(100% - 45px) 45px);
 	transition: all 0.3s ease-in-out;
 	z-index: 1;
 }
 
-#active:checked ~ .wrapper {
+#active:checked~.wrapper {
 	clip-path: circle(100%);
 }
-#active:checked ~ .menu-btn {
-	background-color: #DFCE6B;
+
+#active:checked~.menu-btn {
+	background-color: var(--b4);
 	color: black;
 }
 
@@ -104,7 +108,7 @@ body {
 }
 
 .wrapper ul li a {
-	color: white;
+	color: var(--color);
 	font-size: 6em;
 	text-decoration: none;
 	opacity: .3;
@@ -126,10 +130,10 @@ body {
 	height: 50px;
 	width: 50px;
 	border-radius: 50%;
-	color: #9E4784;
+	color: var(--b3);
 	font-size: 2rem;
 	cursor: pointer;
-	background-color: #D27685;
+	background-color: var(--b5);
 }
 
 input {
@@ -155,7 +159,7 @@ span {
 	transform: translatey(0);
 	display: inline-block;
 	font-size: 3.2rem;
-	color: #D27685;
+	color:  var(--b5);;
 	animation-timing-function: cubic-bezier(0, .77, .55, .02);
 	font-family: 'Press Start 2P', cursive;
 }
@@ -226,7 +230,7 @@ h6 {
 }
 
 .portfolio_project {
-	background-color: #37306B;
+	background-color:   var(--b1);
 	border-radius: 2rem;
 	opacity: background-color .2;
 	text-align: left;
@@ -237,7 +241,7 @@ h6 {
 
 .portfolio_project a {
 	text-decoration: none;
-	color: white;
+	color:  var(--color);
 }
 
 .portfolio_project a::before {
@@ -245,7 +249,7 @@ h6 {
 }
 
 .portfolio_project:hover {
-	background-color: var(--letter-line);
+	background-color:  var(--b4);
 	transition: .6s;
 	border-radius: 3rem;
 }
