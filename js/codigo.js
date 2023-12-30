@@ -19,7 +19,7 @@ class Proyecto {
 let pizarra = new Proyecto('PIZARRA', 'https://jsolano0112.github.io/Pizarra/', 'img/pizarra.png',200,200, '')
 let appControlGastos = new Proyecto('APP CONTROL GASTOS', 'https://github.com/jsolano0112/ControlGastos.git', 'img/appControlGastos.png',200,200, '')
 let gusanoPy = new Proyecto('GUSANITO-PYTHON', 'https://github.com/jsolano0112/Gusanito.git', 'img/gusanito.png',200,200, '')
-let shoppingCart = new Proyecto('Shopping Cart - Angular', 'https://github.com/jsolano0112/shopping-cart-angular', 'img/shop.png',200,200, '')
+let shoppingCart = new Proyecto('Shopping Cart - Angular', 'https://github.com/jsolano0112/shopping-cart-angular', 'img/shop.PNG',200,200, '')
 
 proyectosLista.push(pizarra, appControlGastos, gusanoPy, shoppingCart)
 
